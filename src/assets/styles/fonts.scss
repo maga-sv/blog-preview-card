@@ -1,0 +1,9 @@
+$Figtree: ('Semi', 600), ('Extra', 800);
+
+@each $name, $width in $Figtree {
+    @font-face {
+        src: url(../fonts/static/Figtree-#{$name}Bold.ttf);
+        font-family: "Figtree";
+        font-weight: $width;
+    }
+}
