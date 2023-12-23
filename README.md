@@ -8,4 +8,4 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: (https://github.com/maga-sv/blog-preview-card)
-- Live Site URL: (blog-card-preview-ms.netlify.app/)
+- Live Site URL: (https://blog-card-preview-ms.netlify.app/)
