@@ -18,7 +18,6 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 main {  
   height: 100vh;
-  background: var(--primaryColor);
   display: grid;
   place-items: center;
   position: relative;

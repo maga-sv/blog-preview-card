@@ -1,4 +1,8 @@
 <script setup>
+import { useBlogStore } from '../stores/blog.js';
+
+const blogStore = useBlogStore()
+
 </script>
 
 <template>
@@ -9,19 +13,19 @@
 
     <div class="blog__card">
 
-      <img src="@/assets/images/illustration-article.svg" alt="illustration" class="blog__card-img">
+      <img :src="blogStore?.blog?.backgroundImg ? blogStore?.blog?.backgroundImg : '../assets/images/no-image.jpg'" alt="illustration" class="blog__card-img">
 
-      <a href="#!"  class="blog__card-tag">Learning</a>
+      <a href="#!"  class="blog__card-tag">{{blogStore?.blog?.type}}</a>
 
-      <span class="blog__card-date">Published 21 Dec 2023</span>
+      <span class="blog__card-date">Published {{blogStore?.blog?.date}}</span>
 
-      <h3 class="blog__card-title">HTML & CSS foundations</h3>
+      <h3 class="blog__card-title">{{blogStore?.blog?.title}}</h3>
 
-      <p class="blog__card-txt">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <p class="blog__card-txt">{{blogStore?.blog?.text}}</p>
 
       <a href="#!" class="blog__card-user">
-        <img src="../assets/images/image-avatar.webp" alt="avatar" class="blog__card-user-ava">
-        <span class="blog__card-user-name">Greg Hooper</span>
+        <img :src="blogStore?.blog?.user?.ava" alt="avatar" class="blog__card-user-ava">
+        <span class="blog__card-user-name">{{blogStore?.blog?.user?.name}}</span>
       </a>
 
     </div>
@@ -80,6 +84,14 @@
       align-items: center;
       gap: 15px;
       width: 200px;
+
+      &-ava {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+      }
 
       &-name  {
         font-weight: 800;

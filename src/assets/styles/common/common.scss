@@ -13,6 +13,11 @@ img {
     vertical-align: bottom;
 }
 
+body {
+  background: var(--primaryColor);
+
+}
+
 .container {
     max-width: 1440px;
     width: 100%;
