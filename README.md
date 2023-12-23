@@ -7,5 +7,5 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 ![](./src/assets/screenshot.jpg)
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/maga-sv/blog-preview-card)
-- Live Site URL: [Add live site URL here](blog-card-preview-ms.netlify.app/)
+- Solution URL: (https://github.com/maga-sv/blog-preview-card)
+- Live Site URL: (blog-card-preview-ms.netlify.app/)
