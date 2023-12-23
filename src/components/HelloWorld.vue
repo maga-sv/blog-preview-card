@@ -68,6 +68,7 @@ const blogStore = useBlogStore()
       font-size: 20px;
       color: var(--secAccentColor);
       cursor: pointer;
+      transition: 400ms;
       
       &:hover {
         color: var(--primaryColor);
