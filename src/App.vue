@@ -9,17 +9,23 @@ import HelloWorld from "./components/HelloWorld.vue";
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://www.frontendmentor.io/profile/maga-sv">Maga</a>.
+      >. Coded by <a href="https://www.frontendmentor.io/profile/maga-sv" target="_blank">Maga</a>.
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
 
-main {
-
+main {  
+  height: 100vh;
+  background: var(--primaryColor);
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 .attribution {
+  position: absolute;
+  bottom: 30px;
   font-size: 11px;
   text-align: center;
 
