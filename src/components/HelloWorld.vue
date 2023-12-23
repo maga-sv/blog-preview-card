@@ -67,6 +67,10 @@ const blogStore = useBlogStore()
       font-weight: 800;
       font-size: 20px;
       color: var(--secAccentColor);
+      
+      &:hover {
+        color: var(--primaryColor);
+      }
     }
     
     &-txt {
