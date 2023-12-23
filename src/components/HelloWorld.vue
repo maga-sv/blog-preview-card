@@ -1,4 +1,5 @@
 <script setup>
+import BlogCard from '../components/BlogCard/BlogCard.vue'
 import { useBlogStore } from '../stores/blog.js';
 
 const blogStore = useBlogStore()
@@ -11,24 +12,11 @@ const blogStore = useBlogStore()
 
   <div class="container">
 
-    <div class="blog__card">
+    <div class="blog__cards">
 
-      <img :src="blogStore?.blog?.backgroundImg ? blogStore?.blog?.backgroundImg : '../assets/images/no-image.jpg'" alt="illustration" class="blog__card-img">
-
-      <a href="#!"  class="blog__card-tag">{{blogStore?.blog?.type}}</a>
-
-      <span class="blog__card-date">Published {{blogStore?.blog?.date}}</span>
-
-      <h3 class="blog__card-title">{{blogStore?.blog?.title}}</h3>
-
-      <p class="blog__card-txt">{{blogStore?.blog?.text}}</p>
-
-      <a href="#!" class="blog__card-user">
-        <img :src="blogStore?.blog?.user?.ava" alt="avatar" class="blog__card-user-ava">
-        <span class="blog__card-user-name">{{blogStore?.blog?.user?.name}}</span>
-      </a>
-
+      <BlogCard v-for="(blog, index) in blogStore?.blog" :key="index" :blog="blog" />
     </div>
+
 
   </div>
 
@@ -36,9 +24,16 @@ const blogStore = useBlogStore()
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .blog {
+
+  &__cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
   &__card {
     max-width: 400px;
